@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESMMA Bienes Raíces | Casas en Venta en Metepec | Inmobiliaria Metepec</title>
+<meta name="description" content="ESMMA Bienes Raíces – Especialistas en casas, terrenos, departamentos y preventas en Metepec y Toluca. +10 años de experiencia. Asesoría legal incluida.">
+<meta name="keywords" content="casas en venta en Metepec, inmobiliaria en Metepec, departamentos en venta Toluca, terrenos en venta Metepec, bienes raíces Metepec, casas de lujo en Metepec, comprar casa en Toluca, casas nuevas en Metepec, propiedades en venta Toluca, casas en renta Metepec, inmobiliaria Toluca, residencias en Metepec, terrenos residenciales Metepec, casas con crédito Infonavit Metepec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* ── Variables ─────────────────────────────── */
+:root{
+  --red:   #8B1A1A;   /* rojo vino del logo */
+  --red2:  #6B1313;
+  --ink:   #111111;
+  --mid:   #555555;
+  --light: #999999;
+  --line:  #E5E5E5;
+  --bg:    #FFFFFF;
+  --warm:  #FAF9F7;
+  --ease:  cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ── Tipografía ─────────────────────────────── */
+.serif{font-family:'Cormorant Garamond',serif}
+.t-hero{font-family:'Cormorant Garamond',serif;font-size:clamp(3.8rem,8vw,8rem);line-height:.92;letter-spacing:-.02em;font-weight:300}
+.t-h2  {font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,4.2rem);line-height:1.05;font-weight:300;letter-spacing:-.01em}
+.t-h3  {font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.1;font-weight:400}
+.label {font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--light)}
+.body  {font-size:.95rem;line-height:1.8;color:var(--mid);font-weight:300}
+
+/* ── Layout ─────────────────────────────────── */
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem)}
+.sec {padding:clamp(5rem,9vw,9rem) 0}
+
+/* ── Línea decorativa ────────────────────────── */
+.rule{display:flex;align-items:center;gap:1rem}
+.rule::before{content:'';display:block;width:32px;height:1px;background:var(--red)}
+
+/* ── Header ─────────────────────────────────── */
+#hdr{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:72px;display:flex;align-items:center;
+  padding:0 clamp(1.5rem,5vw,5rem);
+  background:rgba(255,255,255,.93);backdrop-filter:blur(18px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s;
+}
+#hdr.solid{border-color:var(--line)}
+.nav-a{
+  font-size:.78rem;font-weight:500;color:var(--mid);
+  position:relative;padding-bottom:3px;transition:color .2s;
+}
+.nav-a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--red);transition:width .3s var(--ease)}
+.nav-a:hover{color:var(--ink)}
+.nav-a:hover::after{width:100%}
+
+/* Logo SVG inline */
+.logo-mark{height:38px;width:auto}
+.logo-wrap{display:flex;align-items:center;gap:.75rem}
+.logo-text-wrap{line-height:1}
+
+/* ── Botones ─────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:.8rem 2rem;cursor:pointer;border:none;transition:all .2s var(--ease);
+  white-space:nowrap;
+}
+.btn-red  {background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red2);transform:translateY(-1px)}
+.btn-border{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-border:hover{background:var(--ink);color:#fff}
+.btn-border-red{background:transparent;color:var(--red);border:1.5px solid var(--red)}
+.btn-border-red:hover{background:var(--red);color:#fff}
+
+/* ── Hero ────────────────────────────────────── */
+#hero{
+  position:relative;min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 clamp(1.5rem,5vw,5rem) clamp(3rem,6vw,6rem);
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:url('https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1800&q=85') center/cover no-repeat;
+}
+.hero-ov{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(10,5,5,.75) 0%,rgba(10,5,5,.15) 55%,rgba(10,5,5,.05) 100%);
+}
+.hero-inner{position:relative;z-index:2;max-width:1360px;margin:0 auto;width:100%}
+
+/* ── Buscador ────────────────────────────────── */
+#search-bar{
+  background:#fff;
+  border-top:3px solid var(--red);
+  padding:2rem clamp(1.5rem,5vw,5rem);
+  box-shadow:0 12px 48px rgba(0,0,0,.07);
+}
+.s-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:2rem;align-items:end}
+.s-field label{display:block;font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--light);margin-bottom:.6rem}
+.s-input{width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.5rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none;transition:border-color .2s}
+.s-input:focus{border-color:var(--red)}
+@media(max-width:900px){.s-inner{grid-template-columns:1fr 1fr;}.s-inner .btn{grid-column:span 2}}
+@media(max-width:540px){.s-inner{grid-template-columns:1fr}}
+
+/* ── Stats ───────────────────────────────────── */
+.stat-line{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat-item{padding:3rem 2.5rem;border-right:1px solid var(--line)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1;color:var(--ink)}
+.stat-num sup{font-size:1.5rem;color:var(--red);vertical-align:top;margin-top:.4rem;display:inline-block}
+@media(max-width:700px){.stat-line{grid-template-columns:1fr 1fr}.stat-item{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.stat-item:nth-child(2n){border-right:none}.stat-item:nth-last-child(-n+2){border-bottom:none}}
+
+/* ── Cards propiedades ───────────────────────── */
+.prop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--line)}
+.prop-card{background:#fff;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease);position:relative}
+.prop-card:hover{transform:translateY(-5px);box-shadow:0 20px 52px rgba(0,0,0,.1);z-index:1}
+.prop-img{position:relative;overflow:hidden;aspect-ratio:4/3}
+.prop-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.prop-card:hover .prop-img img{transform:scale(1.06)}
+.star-badge{position:absolute;top:1rem;left:1rem;background:var(--red);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .8rem}
+.tipo-badge{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.9);color:var(--ink);font-size:.62rem;font-weight:600;padding:.3rem .7rem}
+.prop-body{padding:1.75rem;flex:1;display:flex;flex-direction:column;gap:.4rem}
+.prop-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--red);line-height:1}
+.prop-price small{font-family:'DM Sans',sans-serif;font-size:.68rem;color:var(--light);font-weight:400}
+.prop-name{font-size:.88rem;font-weight:500;color:var(--ink);margin-top:.2rem}
+.prop-loc{font-size:.75rem;color:var(--light);display:flex;align-items:center;gap:.3rem;margin-top:.1rem}
+.prop-specs{display:flex;gap:1.2rem;margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+.spec{font-size:.7rem;color:var(--mid);display:flex;align-items:center;gap:.3rem}
+.prop-foot{padding:1.25rem 1.75rem;border-top:1px solid var(--line)}
+
+/* ── Terrenos ────────────────────────────────── */
+.terreno-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2.5rem}
+.terreno-card{position:relative;overflow:hidden;aspect-ratio:3/2;cursor:pointer}
+.terreno-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.terreno-card:hover img{transform:scale(1.05)}
+.terreno-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;transition:background .3s}
+.terreno-card:hover .terreno-ov{background:linear-gradient(to top,rgba(139,26,26,.82) 0%,rgba(139,26,26,.15) 60%)}
+
+/* ── Inversión ───────────────────────────────── */
+.inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.inv-card{background:#fff;padding:3rem 2.5rem;position:relative;overflow:hidden;transition:background .3s}
+.inv-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
+.inv-card:hover{background:var(--warm)}
+.inv-card:hover::before{transform:scaleX(1)}
+.roi{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--red);line-height:1;margin-bottom:.5rem}
+@media(max-width:780px){.inv-grid{grid-template-columns:1fr}}
+
+/* ── Galería ─────────────────────────────────── */
+#galeria-wrap{position:relative;overflow:hidden;aspect-ratio:16/8;background:#111}
+.gal-track{display:flex;height:100%;transition:transform .6s var(--ease)}
+.gal-slide{flex:0 0 100%;position:relative}
+.gal-slide img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.gal-cap{position:absolute;bottom:0;left:0;right:0;padding:2.5rem clamp(1.5rem,5vw,5rem);background:linear-gradient(to top,rgba(0,0,0,.65),transparent);color:#fff}
+.gal-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;width:52px;height:52px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s,border-color .2s;backdrop-filter:blur(4px)}
+.gal-btn:hover{background:var(--red);border-color:var(--red)}
+#gal-prev{left:2rem}
+#gal-next{right:2rem}
+.gal-dots{display:flex;gap:.5rem;align-items:center;margin-top:1.5rem}
+.gal-dot{width:5px;height:5px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s,width .3s}
+.gal-dot.on{background:var(--red);width:20px;border-radius:3px}
+
+/* ── Testimonios ─────────────────────────────── */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem}
+.testi-card{padding:2.5rem;border:1px solid var(--line);position:relative;transition:border-color .3s,box-shadow .3s}
+.testi-card:hover{border-color:var(--red);box-shadow:0 12px 36px rgba(139,26,26,.08)}
+.testi-quote{font-family:'Cormorant Garamond',serif;font-size:4.5rem;color:var(--red);opacity:.15;position:absolute;top:.5rem;left:1.5rem;line-height:1}
+.testi-stars{display:flex;gap:.2rem;color:var(--red);margin-bottom:1rem}
+.testi-txt{font-size:.875rem;line-height:1.85;color:var(--mid);font-style:italic;margin-bottom:1.75rem}
+.testi-by{display:flex;align-items:center;gap:.75rem}
+.testi-av{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.testi-nm{font-size:.8rem;font-weight:600;color:var(--ink)}
+.testi-rl{font-size:.7rem;color:var(--light)}
+
+/* ── Asesoras ────────────────────────────────── */
+.asesora-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.asesora-card{background:#fff;display:grid;grid-template-columns:200px 1fr;overflow:hidden;transition:background .3s}
+.asesora-card:hover{background:var(--warm)}
+.asesora-img{aspect-ratio:1;overflow:hidden}
+.asesora-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);transition:filter .3s,transform .6s var(--ease)}
+.asesora-card:hover .asesora-img img{filter:grayscale(0);transform:scale(1.04)}
+.asesora-info{padding:2.5rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem}
+.asesora-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;line-height:1.05}
+@media(max-width:900px){.asesora-grid{grid-template-columns:1fr}.asesora-card{grid-template-columns:1fr}.asesora-img{aspect-ratio:16/9}}
+@media(max-width:600px){.asesora-card{grid-template-columns:1fr}}
+
+/* ── Contacto ────────────────────────────────── */
+.cf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+@media(max-width:900px){.cf-wrap{grid-template-columns:1fr;gap:3rem}}
+.cf{display:flex;flex-direction:column;gap:2rem}
+.cf-field{position:relative;padding-bottom:.25rem}
+.cf-field input,.cf-field textarea,.cf-field select{
+  width:100%;border:none;border-bottom:1.5px solid var(--line);
+  padding:.65rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;
+  color:var(--ink);background:transparent;outline:none;resize:none;
+  transition:border-color .2s;
+}
+.cf-field input:focus,.cf-field textarea:focus,.cf-field select:focus{border-color:var(--red)}
+.cf-field label{
+  position:absolute;top:.65rem;left:0;font-size:.85rem;color:var(--light);
+  transition:all .2s;pointer-events:none;
+}
+.cf-field input:focus~label,
+.cf-field input:not(:placeholder-shown)~label,
+.cf-field textarea:focus~label,
+.cf-field textarea:not(:placeholder-shown)~label{
+  top:-.9rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red)
+}
+
+/* ── Footer ──────────────────────────────────── */
+#footer{background:#0c0808;color:rgba(255,255,255,.4);padding:clamp(4rem,8vw,8rem) 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:540px){.footer-grid{grid-template-columns:1fr}}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:.75rem}
+.f-link{display:block;font-size:.8rem;color:rgba(255,255,255,.4);margin-bottom:.6rem;transition:color .2s}
+.f-link:hover{color:#fff}
+.f-title{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1.25rem}
+.footer-hr{border:none;border-top:1px solid rgba(255,255,255,.07);margin-bottom:1.5rem}
+
+/* ── WA flotante ──────────────────────────────── */
+#wa-fab{
+  position:fixed;bottom:2rem;right:2rem;z-index:90;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 24px rgba(37,211,102,.45);animation:wa-pulse 2.8s infinite;
+}
+@keyframes wa-pulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.45)}50%{box-shadow:0 4px 38px rgba(37,211,102,.72)}}
+
+/* ── Modals ───────────────────────────────────── */
+.modal-bg{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-bg.on{display:flex}
+.modal-box{background:#fff;max-width:460px;width:100%;padding:2.5rem;position:relative;animation:min .35s var(--ease);max-height:92vh;overflow-y:auto}
+@keyframes min{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.modal-x{position:absolute;top:1rem;right:1rem;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--light);transition:color .2s;background:none;border:none}
+.modal-x:hover{color:var(--ink)}
+
+/* ── Panel agentes ────────────────────────────── */
+#panel-bg{position:fixed;inset:0;z-index:210;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);display:none;align-items:flex-start;justify-content:center;padding:2rem 1rem;overflow-y:auto}
+#panel-bg.on{display:flex}
+#panel-box{background:#fff;width:100%;max-width:960px;animation:min .35s var(--ease)}
+
+/* ── Reveal scroll ────────────────────────────── */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rev.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+  DATOS EDITABLES
+═══════════════════════════════════ -->
+<script>
+/* ── PROPIEDADES ── */
+const PROPS_DEFAULT = [
+  {id:1,op:'venta',tipo:'Casa',       nombre:'Residencia Santa Fe Metepec', precio:4800000,moneda:'MXN',    ubi:'Metepec, Estado de México',  rec:4,ban:3,mts:280,foto:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80',agente:'lupita',star:true},
+  {id:2,op:'venta',tipo:'Casa',       nombre:'Casa Moderna Las Pilares',    precio:3200000,moneda:'MXN',    ubi:'Las Pilares, Metepec',        rec:3,ban:2,mts:195,foto:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80',agente:'elena',star:false},
+  {id:3,op:'venta',tipo:'Departamento',nombre:'Depto Ejecutivo Centro Toluca',precio:1850000,moneda:'MXN', ubi:'Centro, Toluca',              rec:2,ban:2,mts:105,foto:'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80',agente:'lupita',star:false},
+  {id:4,op:'venta',tipo:'Casa',       nombre:'Residencia Club de Golf',     precio:8500000,moneda:'MXN',    ubi:'Club de Golf, Metepec',       rec:5,ban:4,mts:420,foto:'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=700&q=80',agente:'elena',star:true},
+  {id:5,op:'renta',tipo:'Casa',       nombre:'Casa Amueblada Xinantécatl',  precio:18000,  moneda:'MXN/mes',ubi:'Xinantécatl, Metepec',       rec:3,ban:2,mts:180,foto:'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&q=80',agente:'lupita',star:false},
+  {id:6,op:'renta',tipo:'Departamento',nombre:'Depto Nuevo Toluca 2000',    precio:12500,  moneda:'MXN/mes',ubi:'Toluca 2000, Toluca',         rec:2,ban:1,mts:90, foto:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80',agente:'elena',star:false},
+  {id:7,op:'venta',tipo:'Terreno',    nombre:'Terreno Residencial Pilares', precio:1200000,moneda:'MXN',    ubi:'Las Pilares, Metepec',        rec:0,ban:0,mts:350,foto:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80',agente:'lupita',star:false},
+  {id:8,op:'venta',tipo:'Terreno',    nombre:'Lote Esquina Club de Golf',   precio:980000, moneda:'MXN',    ubi:'Club de Golf, Metepec',       rec:0,ban:0,mts:280,foto:'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80',agente:'elena',star:true},
+];
+
+/* ── AGENTES / ASESORAS ── */
+const AGENTES = {
+  lupita:{ pass:'lupita2024', nombre:'Lupita Maldonado', tel:'7223474298', color:'#8B1A1A' },
+  elena: { pass:'elena2024',  nombre:'Elena Maldonado',  tel:'7224747718', color:'#2C5282' },
+};
+
+/* ── GALERÍA ── */
+const GALERIA = [
+  {img:'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1800&q=85', cap:'Residencia Club de Golf — Metepec'},
+  {img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=85', cap:'Casa Santa Fe — Acabados premium'},
+  {img:'https://images.unsplash.com/photo-1560184897-ae75f418493e?w=1800&q=85', cap:'Interiores de diseño — Sala principal'},
+  {img:'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1800&q=85', cap:'Cocina integral — Materiales de primera'},
+  {img:'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1800&q=85', cap:'Vista panorámica — Terraza privada'},
+];
+
+/* ── TESTIMONIOS ── */
+const TESTI = [
+  {nombre:'Adriana Reyes',   rol:'Compradora — Metepec',       txt:'ESMMA nos ayudó a encontrar nuestra casa en tiempo récord. El asesoramiento legal fue impecable y resolvieron todas nuestras dudas con gran profesionalismo.',stars:5,foto:'https://i.pravatar.cc/80?img=47'},
+  {nombre:'Roberto Sánchez', rol:'Inversionista — Terrenos',   txt:'Invertí en un terreno residencial con su guía y en 14 meses la plusvalía superó el 20%. Tienen un conocimiento excepcional del mercado de Metepec.',stars:5,foto:'https://i.pravatar.cc/80?img=12'},
+  {nombre:'Daniela Torres',  rol:'Arrendataria — Toluca',      txt:'Rentar con ESMMA fue la mejor decisión. Todo fue transparente, rápido y el equipo me atendió con amabilidad desde el primer mensaje de WhatsApp.',stars:5,foto:'https://i.pravatar.cc/80?img=32'},
+  {nombre:'Miguel Ángel Cruz',rol:'Vendedor — Xinantécatl',    txt:'Vendí mi propiedad en 3 semanas. Su estrategia y el seguimiento personalizado marcaron una enorme diferencia frente a otras inmobiliarias.',stars:5,foto:'https://i.pravatar.cc/80?img=68'},
+];
+
+/* ── ESTADO GLOBAL ── */
+let lang='es', userLogged=null, galIdx=0;
+let props = JSON.parse(localStorage.getItem('esmma_v3')||'null') || JSON.parse(JSON.stringify(PROPS_DEFAULT));
+
+const TR={
+  es:{nav:['Inicio','Nosotros','Comprar','Rentar','Terrenos','Invertir','Galería','Contacto'],
+      wa:'WhatsApp',ags:'Asesoras',hero_eye:'Inmobiliaria en Metepec y Toluca',
+      hero_a:'El hogar que',hero_b:'soñaste',hero_c:'ya existe.',
+      hero_sub:'Casas, departamentos, terrenos y preventas. Más de 10 años en el Valle de Toluca.',
+      s_op:'Operación',s_tipo:'Tipo',s_ubi:'Ubicación',s_max:'Precio máximo',s_btn:'Buscar',
+      sec_comprar:'Propiedades en Venta',sec_rentar:'Propiedades en Renta',
+      sec_terrenos:'Especialistas en Terrenos',
+      ter_sub:'Lotes residenciales en las zonas de mayor plusvalía de Metepec. La tierra es la inversión que nunca pierde valor.',
+      sec_inv:'Inversión Inmobiliaria',inv_sub:'Opciones curadas por nuestro equipo de expertas.',
+      sec_gal:'Galería',sec_testi:'Clientes que nos respaldan',
+      sec_asesoras:'Nuestras Asesoras',
+      sec_ct:'Contáctanos',ct_sub:'Un asesor te responde en menos de 2 horas.',
+      me_int:'Me interesa',brochure:'Solicitar Brochure',
+      stats:['Propiedades vendidas','Años de experiencia','Clientes satisfechos','Asesoras especializadas'],
+      pop_title:'¡Tu propiedad ideal te espera!',pop_sub:'Déjanos tus datos y te contactamos en menos de 1 hora.',
+      pop_int:'Me interesa…',pop_btn:'Quiero que me contacten',pop_skip:'Ahora no',
+      f_nombre:'Nombre completo',f_tel:'Teléfono',f_email:'Correo electrónico',
+      f_msg:'¿En qué podemos ayudarte?',f_send:'Enviar Mensaje',
+      rights:'© 2024 ESMMA Bienes Raíces. Todos los derechos reservados.',
+      privacy:'Aviso de Privacidad',terms:'Términos y Condiciones'},
+  en:{nav:['Home','About','Buy','Rent','Land','Invest','Gallery','Contact'],
+      wa:'WhatsApp',ags:'Advisors',hero_eye:'Real Estate in Metepec & Toluca',
+      hero_a:'The home you',hero_b:'dreamed of',hero_c:'already exists.',
+      hero_sub:'Houses, apartments, land and pre-sales. 10+ years in Toluca Valley.',
+      s_op:'Operation',s_tipo:'Type',s_ubi:'Location',s_max:'Max price',s_btn:'Search',
+      sec_comprar:'Properties for Sale',sec_rentar:'Properties for Rent',
+      sec_terrenos:'Land Specialists',
+      ter_sub:'Residential lots in the highest-appreciation zones of Metepec. Land is the investment that never loses value.',
+      sec_inv:'Real Estate Investment',inv_sub:'Options curated by our expert team.',
+      sec_gal:'Gallery',sec_testi:'Clients who trust us',
+      sec_asesoras:'Our Advisors',
+      sec_ct:'Contact Us',ct_sub:'An advisor will reach you within 2 hours.',
+      me_int:"I'm Interested",brochure:'Request Brochure',
+      stats:['Properties sold','Years of experience','Happy clients','Specialized advisors'],
+      pop_title:'Your ideal property awaits!',pop_sub:'Leave your details and we\'ll contact you within 1 hour.',
+      pop_int:'I\'m interested in…',pop_btn:'Contact Me',pop_skip:'Not now',
+      f_nombre:'Full name',f_tel:'Phone',f_email:'Email address',
+      f_msg:'How can we help?',f_send:'Send Message',
+      rights:'© 2024 ESMMA Bienes Raíces. All rights reserved.',
+      privacy:'Privacy Notice',terms:'Terms & Conditions'}
+};
+function t(k){return TR[lang][k]||k}
+function fmt(n){return '$'+Number(n).toLocaleString('es-MX')}
+function save(){localStorage.setItem('esmma_v3',JSON.stringify(props))}
+</script>
+
+<!-- ════════ HEADER ════════ -->
+<header id="hdr">
+  <!-- Logo real ESMMA Bienes Raíces -->
+  <a href="#inicio" class="logo-wrap">
+    <img src="logo.jpg" alt="ESMMA Bienes Raíces" style="height:48px;width:auto;object-fit:contain;">
+  </a>
+
+  <nav id="nav-d" class="hidden lg:flex items-center gap-7"></nav>
+
+  <div class="flex items-center gap-3">
+    <!-- Sociales -->
+    <div class="hidden md:flex items-center gap-2">
+      <a href="https://facebook.com" target="_blank" style="color:var(--light);transition:color .2s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--light)'"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" style="color:var(--light);transition:color .2s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--light)'"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://tiktok.com" target="_blank" style="color:var(--light);transition:color .2s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--light)'"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 105.54 6.29V8.75a8.16 8.16 0 004.77 1.52V6.8a4.85 4.85 0 01-1-.11z"/></svg></a>
+    </div>
+    <button id="lang-btn" onclick="toggleLang()" style="font-size:.68rem;font-weight:600;letter-spacing:.08em;border:1.5px solid var(--line);padding:.32rem .8rem;cursor:pointer;background:transparent;color:var(--mid);transition:all .2s">EN</button>
+    <a id="hdr-wa" href="https://wa.me/527223474298" target="_blank" class="btn btn-red hidden sm:inline-flex" style="padding:.65rem 1.5rem;">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.33 6.33 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+      <span id="wa-txt">WhatsApp</span>
+    </a>
+    <button onclick="abrirLogin()" style="background:none;border:none;cursor:pointer;font-size:.72rem;font-weight:500;color:var(--light);transition:color .2s;display:none;" class="sm:block" id="ags-btn" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--light)'">
+      <span id="ags-txt">Asesoras</span>
+    </button>
+    <button onclick="toggleMobile()" class="lg:hidden" style="background:none;border:none;cursor:pointer">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Nav móvil -->
+<div id="nav-m" style="display:none;position:fixed;top:72px;left:0;right:0;z-index:99;background:#fff;border-bottom:1px solid var(--line);padding:1.5rem clamp(1.5rem,5vw,5rem)">
+  <div id="nav-m-inner" style="display:flex;flex-direction:column;gap:1rem"></div>
+</div>
+
+<!-- ════════ HERO ════════ -->
+<section id="inicio">
+  <div id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-ov"></div>
+    <div class="hero-inner">
+      <div class="rule" style="margin-bottom:1.5rem">
+        <span class="label" id="hero-eye" style="color:rgba(255,255,255,.55)">Inmobiliaria en Metepec y Toluca</span>
+      </div>
+      <h1 class="t-hero" style="color:#fff;margin-bottom:2rem">
+        <span id="h1a">El hogar que</span><br>
+        <em style="font-style:italic;color:rgba(255,255,255,.65)" id="h1b">soñaste</em><br>
+        <span id="h1c">ya existe.</span>
+      </h1>
+      <p class="body" id="hero-sub" style="color:rgba(255,255,255,.65);max-width:520px;margin-bottom:2.5rem">
+        Casas, departamentos, terrenos y preventas. Más de 10 años en el Valle de Toluca.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="#comprar" class="btn btn-red">Ver propiedades</a>
+        <a href="https://wa.me/527223474298?text=Hola%20ESMMA%20Bienes%20Raíces" target="_blank" class="btn btn-border" style="color:#fff;border-color:rgba(255,255,255,.5)">
+          Hablar con una asesora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ BUSCADOR ════════ -->
+<div id="search-bar">
+  <div class="s-inner">
+    <div class="s-field">
+      <label id="lbl-op">Operación</label>
+      <select id="s-op" class="s-input">
+        <option value="">Todas</option>
+        <option value="venta">Comprar</option>
+        <option value="renta">Rentar</option>
+      </select>
+    </div>
+    <div class="s-field">
+      <label id="lbl-tipo">Tipo</label>
+      <select id="s-tipo" class="s-input">
+        <option value="">Todos</option>
+        <option value="Casa">Casa</option>
+        <option value="Departamento">Departamento</option>
+        <option value="Terreno">Terreno</option>
+      </select>
+    </div>
+    <div class="s-field">
+      <label id="lbl-ubi">Ubicación</label>
+      <input id="s-ubi" type="text" placeholder="Metepec, Toluca…" class="s-input">
+    </div>
+    <div class="s-field">
+      <label id="lbl-max">Precio máximo</label>
+      <select id="s-max" class="s-input">
+        <option value="">Sin límite</option>
+        <option value="1500000">$1,500,000</option>
+        <option value="3000000">$3,000,000</option>
+        <option value="5000000">$5,000,000</option>
+        <option value="10000000">$10,000,000+</option>
+      </select>
+    </div>
+    <button onclick="buscar()" id="btn-buscar" class="btn btn-red">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Buscar
+    </button>
+  </div>
+</div>
+
+<!-- ════════ STATS ════════ -->
+<section id="nosotros" style="border-bottom:1px solid var(--line)">
+  <div class="stat-line">
+    <div class="stat-item rev">
+      <div class="stat-num"><sup>+</sup>500</div>
+      <div class="label" style="margin-top:.6rem" id="st0">Propiedades vendidas</div>
+    </div>
+    <div class="stat-item rev" style="transition-delay:.1s">
+      <div class="stat-num"><sup>+</sup>10</div>
+      <div class="label" style="margin-top:.6rem" id="st1">Años de experiencia</div>
+    </div>
+    <div class="stat-item rev" style="transition-delay:.2s">
+      <div class="stat-num"><sup>+</sup>1K</div>
+      <div class="label" style="margin-top:.6rem" id="st2">Clientes satisfechos</div>
+    </div>
+    <div class="stat-item rev" style="transition-delay:.3s">
+      <div class="stat-num">2</div>
+      <div class="label" style="margin-top:.6rem" id="st3">Asesoras especializadas</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ QUIÉNES SOMOS ════════ -->
+<section class="sec" style="border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center" class="rev lg:grid-cols-2 gap-4">
+      <div>
+        <div class="rule" style="margin-bottom:1.5rem"><span class="label">Quiénes Somos</span></div>
+        <h2 class="t-h2" style="margin-bottom:1.5rem">Expertas en<br><em>bienes raíces</em><br>del Valle de Toluca</h2>
+        <p class="body" style="margin-bottom:2rem">En ESMMA Bienes Raíces somos un equipo familiar con más de 10 años acompañando a familias e inversores a encontrar su propiedad ideal en Metepec y Toluca. Combinamos asesoría legal, conocimiento del mercado y trato personalizado.</p>
+        <div style="display:flex;flex-direction:column;gap:1.5rem">
+          <div style="display:flex;gap:1rem;align-items:flex-start">
+            <div style="width:2px;height:40px;background:var(--red);flex-shrink:0;margin-top:3px"></div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:.3rem">Asesoría Legal Completa</div><p class="body" style="font-size:.85rem">Acompañamiento notarial, trámites hipotecarios e Infonavit sin costo adicional.</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start">
+            <div style="width:2px;height:40px;background:var(--red);flex-shrink:0;margin-top:3px"></div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:.3rem">+10 Años de Experiencia</div><p class="body" style="font-size:.85rem">Presencia activa en Pilares, Club de Golf, Xinantécatl y las zonas más cotizadas.</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start">
+            <div style="width:2px;height:40px;background:var(--red);flex-shrink:0;margin-top:3px"></div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:.3rem">Mejores Ubicaciones</div><p class="body" style="font-size:.85rem">Acceso a propiedades exclusivas antes de que lleguen al mercado masivo.</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative" class="hidden lg:block">
+        <div style="aspect-ratio:4/5;overflow:hidden"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=80" alt="ESMMA equipo" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="position:absolute;bottom:-1.5rem;left:-1.5rem;background:#fff;border:1px solid var(--line);padding:1.5rem;display:flex;align-items:center;gap:1rem">
+          <svg width="28" height="28" fill="none" stroke="var(--red)" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <div style="font-weight:600;font-size:.85rem">Certificadas</div>
+            <div style="font-size:.72rem;color:var(--light)">AMPI · PROFECO · SHF</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ COMPRAR ════════ -->
+<section id="comprar" class="sec" style="background:var(--warm)">
+  <div class="wrap">
+    <div class="rule rev" style="margin-bottom:1.5rem"><span class="label">Comprar</span></div>
+    <h2 class="t-h2 rev" id="tit-comprar" style="margin-bottom:3rem">Propiedades en Venta</h2>
+    <div id="grid-venta" class="prop-grid"></div>
+    <div id="no-venta" style="display:none;text-align:center;padding:4rem;color:var(--light)">
+      <p>No se encontraron propiedades con esos filtros.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ RENTAR ════════ -->
+<section id="rentar" class="sec">
+  <div class="wrap">
+    <div class="rule rev" style="margin-bottom:1.5rem"><span class="label">Rentar</span></div>
+    <h2 class="t-h2 rev" id="tit-rentar" style="margin-bottom:3rem">Propiedades en Renta</h2>
+    <div id="grid-renta" class="prop-grid"></div>
+    <div id="no-renta" style="display:none;text-align:center;padding:4rem;color:var(--light)">
+      <p>No se encontraron propiedades con esos filtros.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TERRENOS ════════ -->
+<section id="terrenos" class="sec" style="background:var(--warm)">
+  <div class="wrap">
+    <div class="rule rev" style="margin-bottom:1.5rem"><span class="label">Terrenos</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem">
+      <h2 class="t-h2 rev" id="tit-terrenos">Especialistas<br>en Terrenos</h2>
+      <p class="body rev" id="ter-sub">Lotes residenciales en las zonas de mayor plusvalía de Metepec. La tierra es la inversión que nunca pierde valor.</p>
+    </div>
+    <div id="grid-terrenos" class="terreno-grid"></div>
+  </div>
+</section>
+
+<!-- ════════ INVERSIÓN ════════ -->
+<section id="invertir" class="sec">
+  <div class="wrap">
+    <div class="rule rev" style="margin-bottom:1.5rem"><span class="label">Invertir</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem">
+      <h2 class="t-h2 rev" id="tit-inv">Inversión<br>Inmobiliaria</h2>
+      <p class="body rev" id="inv-sub">Opciones curadas por nuestro equipo de expertas.</p>
+    </div>
+    <div class="inv-grid">
+      <div class="inv-card rev">
+        <div class="roi">12–18%</div>
+        <div class="label" style="margin-bottom:1rem">ROI anual estimado</div>
+        <h3 class="t-h3" style="margin-bottom:.75rem" id="inv1">Terrenos</h3>
+        <p class="body" style="font-size:.85rem;margin-bottom:1.75rem" id="inv1d">Lotes residenciales en zonas de alta plusvalía. Inversión mínima desde $980,000 MXN.</p>
+        <button onclick="solBrochure('Terrenos')" class="btn btn-border-red" id="br1" style="padding:.65rem 1.5rem">Solicitar Brochure</button>
+      </div>
+      <div class="inv-card rev" style="transition-delay:.1s">
+        <div class="roi">20–30%</div>
+        <div class="label" style="margin-bottom:1rem">ROI estimado</div>
+        <h3 class="t-h3" style="margin-bottom:.75rem" id="inv2">Preventas</h3>
+        <p class="body" style="font-size:.85rem;margin-bottom:1.75rem" id="inv2d">Adquiere en etapa temprana y obtén el mejor precio antes de que la plusvalía suba.</p>
+        <button onclick="solBrochure('Preventas')" class="btn btn-border-red" id="br2" style="padding:.65rem 1.5rem">Solicitar Brochure</button>
+      </div>
+      <div class="inv-card rev" style="transition-delay:.2s">
+        <div class="roi">15–22%</div>
+        <div class="label" style="margin-bottom:1rem">ROI anual estimado</div>
+        <h3 class="t-h3" style="margin-bottom:.75rem" id="inv3">Desarrollos</h3>
+        <p class="body" style="font-size:.85rem;margin-bottom:1.75rem" id="inv3d">Proyectos de gran escala para inversión institucional o familiar con rendimientos sostenidos.</p>
+        <button onclick="solBrochure('Desarrollos')" class="btn btn-border-red" id="br3" style="padding:.65rem 1.5rem">Solicitar Brochure</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ GALERÍA ════════ -->
+<section id="galeria" style="background:#0c0808">
+  <div style="padding:clamp(3rem,6vw,6rem) 0 0">
+    <div class="wrap" style="margin-bottom:2rem">
+      <div class="rule rev" style="margin-bottom:1.5rem"><span class="label" style="color:rgba(255,255,255,.35)" id="tit-gal">Galería</span></div>
+    </div>
+    <div style="position:relative;overflow:hidden" id="gal-wrap">
+      <div id="gal-track" style="display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)"></div>
+      <button id="gal-prev" onclick="galMove(-1)" style="position:absolute;left:2rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:50px;height:50px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:5" onmouseover="this.style.background='var(--red)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="gal-next" onclick="galMove(1)" style="position:absolute;right:2rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:50px;height:50px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:5" onmouseover="this.style.background='var(--red)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="wrap" style="padding-top:2rem;padding-bottom:3rem;display:flex;align-items:center;justify-content:space-between">
+      <div id="gal-dots" style="display:flex;gap:.5rem;align-items:center"></div>
+      <span id="gal-counter" style="font-size:.75rem;color:rgba(255,255,255,.3);font-weight:600;letter-spacing:.1em"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESTIMONIOS ════════ -->
+<section id="testimonios" class="sec" style="background:var(--warm)">
+  <div class="wrap">
+    <div class="rule rev" style="margin-bottom:1.5rem"><span class="label" id="tit-testi">Clientes que nos respaldan</span></div>
+    <h2 class="t-h2 rev" style="margin-bottom:3rem">Lo que dicen<br><em>nuestros clientes</em></h2>
+    <div class="testi-grid" id="testi-grid"></div>
+  </div>
+</section>
+
+<!-- ════════ ASESORAS ════════ -->
+<section id="asesoras" class="sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="rule rev" style="margin-bottom:1.5rem"><span class="label" id="tit-asesoras">Nuestras Asesoras</span></div>
+    <h2 class="t-h2 rev" style="margin-bottom:3rem">El equipo<br>detrás de ESMMA</h2>
+  </div>
+  <div class="asesora-grid">
+    <!-- Lupita -->
+    <div class="asesora-card rev">
+      <div class="asesora-img">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Lupita Maldonado">
+      </div>
+      <div class="asesora-info">
+        <div class="label" style="color:var(--red)">Asesora Senior</div>
+        <div class="asesora-name">Lupita<br>Maldonado</div>
+        <p class="body" style="font-size:.85rem">Especialista en propiedades residenciales de lujo, terrenos y asesoría Infonavit en Metepec.</p>
+        <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem">
+          <a href="https://wa.me/527223474298?text=Hola%20Lupita%2C%20me%20gustaría%20información%20sobre%20propiedades" target="_blank" class="btn btn-red" style="padding:.65rem 1.5rem;width:fit-content">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.33 6.33 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            722 347 4298
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Elena -->
+    <div class="asesora-card rev" style="transition-delay:.1s">
+      <div class="asesora-img">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Elena Maldonado">
+      </div>
+      <div class="asesora-info">
+        <div class="label" style="color:var(--red)">Asesora Senior</div>
+        <div class="asesora-name">Elena<br>Maldonado</div>
+        <p class="body" style="font-size:.85rem">Especialista en preventas, inversión inmobiliaria y desarrollos residenciales en Toluca y Metepec.</p>
+        <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem">
+          <a href="https://wa.me/527224747718?text=Hola%20Elena%2C%20me%20gustaría%20información%20sobre%20propiedades" target="_blank" class="btn btn-red" style="padding:.65rem 1.5rem;width:fit-content">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.33 6.33 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            722 474 7718
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACTO ════════ -->
+<section id="contacto" class="sec" style="background:var(--warm);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="cf-wrap">
+      <div>
+        <div class="rule rev" style="margin-bottom:1.5rem"><span class="label" id="tit-ct">Contacto</span></div>
+        <h2 class="t-h2 rev" id="h2-ct" style="margin-bottom:1rem">Contáctanos.</h2>
+        <p class="body rev" id="ct-sub" style="margin-bottom:3rem">Un asesor te responde en menos de 2 horas.</p>
+        <div style="display:flex;flex-direction:column;gap:1.5rem">
+          <div style="display:flex;gap:1rem;align-items:center">
+            <div style="width:40px;height:40px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="16" height="16" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><div style="font-size:.8rem;font-weight:600">Oficina</div><div class="body" style="font-size:.8rem">Av. Pino Suárez 600, Metepec, Edo. Méx.</div></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:center">
+            <div style="width:40px;height:40px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="16" height="16" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.9 2.82 2 2 0 012.88 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:.8rem;font-weight:600">Lupita Maldonado</div>
+              <div class="body" style="font-size:.8rem">722 347 4298</div>
+              <div style="font-size:.8rem;font-weight:600;margin-top:.4rem">Elena Maldonado</div>
+              <div class="body" style="font-size:.8rem">722 474 7718</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:center">
+            <div style="width:40px;height:40px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="16" height="16" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div><div style="font-size:.8rem;font-weight:600">Email</div><div class="body" style="font-size:.8rem">contacto@esmmabienes.mx</div></div>
+          </div>
+          <!-- Mapa placeholder -->
+          <div style="height:200px;background:linear-gradient(135deg,#f5f5f5,#ebebeb);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;margin-top:.5rem">
+            <svg width="28" height="28" fill="none" stroke="var(--red)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span style="font-size:.78rem;color:var(--light)">Metepec, Estado de México</span>
+            <span style="font-size:.65rem;color:#ccc">Reemplaza con tu iframe de Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev">
+        <div class="cf">
+          <div class="cf-field">
+            <input id="cf-n" type="text" placeholder=" " class="s-input" style="border-bottom:1.5px solid var(--line);padding:.65rem 0">
+            <label id="lbl-n" style="position:absolute;top:.65rem;left:0;font-size:.85rem;color:var(--light);transition:all .2s;pointer-events:none">Nombre completo</label>
+          </div>
+          <div class="cf-field">
+            <input id="cf-t" type="tel" placeholder=" " class="s-input" style="border-bottom:1.5px solid var(--line);padding:.65rem 0">
+            <label id="lbl-t" style="position:absolute;top:.65rem;left:0;font-size:.85rem;color:var(--light);transition:all .2s;pointer-events:none">Teléfono</label>
+          </div>
+          <div class="cf-field">
+            <input id="cf-e" type="email" placeholder=" " class="s-input" style="border-bottom:1.5px solid var(--line);padding:.65rem 0">
+            <label id="lbl-e" style="position:absolute;top:.65rem;left:0;font-size:.85rem;color:var(--light);transition:all .2s;pointer-events:none">Correo electrónico</label>
+          </div>
+          <div class="cf-field">
+            <textarea id="cf-m" rows="4" placeholder=" " style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.65rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--ink);background:transparent;outline:none;resize:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'"></textarea>
+            <label id="lbl-m" style="position:absolute;top:.65rem;left:0;font-size:.85rem;color:var(--light);transition:all .2s;pointer-events:none">¿En qué podemos ayudarte?</label>
+          </div>
+          <button onclick="enviarCF()" id="btn-send" class="btn btn-red" style="width:100%;justify-content:center">Enviar Mensaje</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer id="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-grid">
+        <!-- Logo footer -->
+        <div style="margin-bottom:1.25rem">
+          <img src="logo.jpg" alt="ESMMA Bienes Raíces" style="height:56px;width:auto;object-fit:contain;filter:brightness(0) invert(1);">
+        </div>
+        <p style="font-size:.8rem;line-height:1.8;color:rgba(255,255,255,.35);max-width:260px;margin-bottom:1.5rem">Tu aliado de confianza en el mercado inmobiliario de Metepec y Toluca. Más de 10 años de experiencia.</p>
+        <div style="display:flex;gap:.75rem">
+          <a href="https://facebook.com" target="_blank" style="width:34px;height:34px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:all .2s" onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://instagram.com" target="_blank" style="width:34px;height:34px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:all .2s" onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://tiktok.com" target="_blank" style="width:34px;height:34px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:all .2s" onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 105.54 6.29V8.75a8.16 8.16 0 004.77 1.52V6.8a4.85 4.85 0 01-1-.11z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="f-title">Servicios</div>
+        <a href="#comprar" class="f-link">Comprar propiedad</a>
+        <a href="#rentar" class="f-link">Rentar propiedad</a>
+        <a href="#terrenos" class="f-link">Terrenos residenciales</a>
+        <a href="#invertir" class="f-link">Inversión inmobiliaria</a>
+        <a href="#contacto" class="f-link">Asesoría legal</a>
+      </div>
+      <div>
+        <div class="f-title">Zonas</div>
+        <a href="#comprar" class="f-link">Las Pilares, Metepec</a>
+        <a href="#comprar" class="f-link">Club de Golf, Metepec</a>
+        <a href="#comprar" class="f-link">Xinantécatl, Metepec</a>
+        <a href="#comprar" class="f-link">Santa Fe, Metepec</a>
+        <a href="#comprar" class="f-link">Toluca 2000</a>
+      </div>
+      <div>
+        <div class="f-title">Asesoras</div>
+        <a href="https://wa.me/527223474298" target="_blank" class="f-link">Lupita Maldonado</a>
+        <a href="https://wa.me/527224747718" target="_blank" class="f-link">Elena Maldonado</a>
+        <div style="margin-top:1.5rem">
+          <a href="https://wa.me/527223474298?text=Hola%20ESMMA%20Bienes%20Raíces" target="_blank" class="btn btn-red" style="padding:.6rem 1.2rem;font-size:.72rem">
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.33 6.33 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Escríbenos
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-hr">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem">
+      <span id="footer-rights" style="font-size:.75rem">© 2024 ESMMA Bienes Raíces. Todos los derechos reservados.</span>
+      <div style="display:flex;gap:2rem">
+        <a href="#" class="f-link" id="footer-priv" style="font-size:.75rem;margin:0">Aviso de Privacidad</a>
+        <a href="#" class="f-link" id="footer-terms" style="font-size:.75rem;margin:0">Términos y Condiciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════ WA FLOTANTE ════════ -->
+<a id="wa-fab" href="https://wa.me/527223474298?text=Hola%20ESMMA%20Bienes%20Raíces" target="_blank" aria-label="WhatsApp">
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.33 6.33 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.112 1.513 5.83L0 24l6.335-1.502A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+</a>
+
+<!-- ════════ POPUP CAPTACIÓN ════════ -->
+<div id="pop-bg" class="modal-bg">
+  <div class="modal-box">
+    <button class="modal-x" onclick="cerrarPop()"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <!-- Logo popup -->
+    <div style="display:flex;justify-content:center;margin-bottom:1.25rem">
+      <img src="logo.jpg" alt="ESMMA Bienes Raíces" style="height:64px;width:auto;object-fit:contain;">
+    </div>
+    <div class="rule" style="justify-content:center;margin-bottom:1rem"><span class="label" style="color:var(--red)">ESMMA Bienes Raíces</span></div>
+    <h3 class="t-h3" id="pop-title" style="text-align:center;margin-bottom:.5rem">¡Tu propiedad ideal te espera!</h3>
+    <p class="body" id="pop-sub" style="text-align:center;font-size:.85rem;margin-bottom:2rem">Déjanos tus datos y te contactamos en menos de 1 hora.</p>
+    <div style="display:flex;flex-direction:column;gap:1.5rem">
+      <div style="position:relative">
+        <input id="pop-n" type="text" placeholder="Tu nombre" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.6rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;background:transparent;outline:none;color:var(--ink)" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'">
+      </div>
+      <div>
+        <input id="pop-t" type="tel" placeholder="Teléfono / WhatsApp" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.6rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;background:transparent;outline:none;color:var(--ink)" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'">
+      </div>
+      <div>
+        <input id="pop-e" type="email" placeholder="Correo electrónico" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.6rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;background:transparent;outline:none;color:var(--ink)" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'">
+      </div>
+      <div>
+        <select id="pop-i" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.6rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--mid);background:transparent;outline:none" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'">
+          <option value="" id="pop-int">Me interesa…</option>
+          <option value="Comprar">Comprar casa/departamento</option>
+          <option value="Rentar">Rentar propiedad</option>
+          <option value="Terreno">Terreno residencial</option>
+          <option value="Invertir">Invertir/Preventa</option>
+        </select>
+      </div>
+      <button onclick="enviarPop()" id="pop-btn" class="btn btn-red" style="justify-content:center">Quiero que me contacten</button>
+      <button onclick="cerrarPop()" id="pop-skip" style="background:none;border:none;cursor:pointer;font-size:.78rem;color:var(--light);text-align:center;transition:color .2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--light)'">Ahora no</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ MODAL LOGIN ASESORAS ════════ -->
+<div id="login-bg" class="modal-bg">
+  <div class="modal-box" style="max-width:400px">
+    <button class="modal-x" onclick="cerrarLogin()"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="rule" style="margin-bottom:1rem"><span class="label" style="color:var(--red)">Acceso Asesoras</span></div>
+    <h3 class="t-h3" style="margin-bottom:2rem">Panel de Propiedades</h3>
+    <div style="display:flex;flex-direction:column;gap:1.75rem">
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.6rem">Usuario</label>
+        <input id="l-user" type="text" placeholder="lupita / elena" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.6rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--ink);background:transparent;outline:none" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.6rem">Contraseña</label>
+        <input id="l-pass" type="password" placeholder="••••••••" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.6rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--ink);background:transparent;outline:none" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'" onkeydown="if(event.key==='Enter')doLogin()">
+      </div>
+      <div id="l-err" style="display:none;font-size:.8rem;color:var(--red)">Usuario o contraseña incorrectos.</div>
+      <button onclick="doLogin()" class="btn btn-red" style="justify-content:center">Ingresar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ PANEL ASESORA ════════ -->
+<div id="panel-bg">
+  <div id="panel-box">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem;border-bottom:1px solid var(--line)">
+      <div style="display:flex;align-items:center;gap:1rem">
+        <div id="panel-av" style="width:40px;height:40px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;font-family:'Cormorant Garamond',serif"></div>
+        <div>
+          <div id="panel-nm" style="font-weight:600;font-size:.9rem;color:var(--ink)">Asesora</div>
+          <div id="panel-rl" style="font-size:.72rem;color:var(--light)">Panel de propiedades</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:center">
+        <button onclick="abrirFormProp(null)" class="btn btn-red" style="padding:.55rem 1.2rem;font-size:.72rem">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Nueva Propiedad
+        </button>
+        <button onclick="cerrarPanel()" style="background:none;border:none;cursor:pointer;font-size:.75rem;font-weight:500;color:var(--light);display:flex;align-items:center;gap:.4rem" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--light)'">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+          Salir
+        </button>
+      </div>
+    </div>
+    <div style="padding:2rem;overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.8rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line)">
+            <th style="text-align:left;padding:.75rem 1rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light)">Propiedad</th>
+            <th style="text-align:left;padding:.75rem 1rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light)">Operación</th>
+            <th style="text-align:left;padding:.75rem 1rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light)">Precio</th>
+            <th style="text-align:left;padding:.75rem 1rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light)">Asesora</th>
+            <th style="text-align:left;padding:.75rem 1rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light)">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ MODAL FORMULARIO PROPIEDAD ════════ -->
+<div id="fp-bg" class="modal-bg">
+  <div class="modal-box" style="max-width:520px">
+    <button class="modal-x" onclick="cerrarFP()"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="rule" style="margin-bottom:.75rem"><span class="label" style="color:var(--red)" id="fp-label">Nueva Propiedad</span></div>
+    <h3 class="t-h3" id="fp-title" style="margin-bottom:2rem">Agregar Propiedad</h3>
+    <input type="hidden" id="fp-id">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem">
+      <div style="grid-column:span 2">
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Nombre</label>
+        <input id="fp-nombre" type="text" placeholder="Ej. Residencia Club de Golf" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Operación</label>
+        <select id="fp-op" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+          <option value="venta">Venta</option><option value="renta">Renta</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Tipo</label>
+        <select id="fp-tipo" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+          <option value="Casa">Casa</option><option value="Departamento">Departamento</option><option value="Terreno">Terreno</option><option value="Local">Local Comercial</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Precio (MXN)</label>
+        <input id="fp-precio" type="number" placeholder="3500000" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Unidad</label>
+        <input id="fp-moneda" type="text" placeholder="MXN ó MXN/mes" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div style="grid-column:span 2">
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Ubicación</label>
+        <input id="fp-ubi" type="text" placeholder="Las Pilares, Metepec" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Recámaras</label>
+        <input id="fp-rec" type="number" placeholder="3" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Baños</label>
+        <input id="fp-ban" type="number" placeholder="2" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Metros²</label>
+        <input id="fp-mts" type="number" placeholder="180" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+      <div>
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">Destacada</label>
+        <select id="fp-star" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+          <option value="false">No</option><option value="true">Sí</option>
+        </select>
+      </div>
+      <div style="grid-column:span 2">
+        <label style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--light);display:block;margin-bottom:.5rem">URL Foto</label>
+        <input id="fp-foto" type="url" placeholder="https://…" style="width:100%;border:none;border-bottom:1.5px solid var(--line);padding:.55rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);background:transparent;outline:none">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem">
+      <button onclick="cerrarFP()" class="btn btn-border" style="justify-content:center">Cancelar</button>
+      <button onclick="guardarProp()" class="btn btn-red" style="justify-content:center">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ JAVASCRIPT ════════ -->
+<script>
+/* ── NAV ─────────────────────────────────────── */
+function buildNav(){
+  const hrefs=['#inicio','#nosotros','#comprar','#rentar','#terrenos','#invertir','#galeria','#contacto'];
+  const labels=t('nav');
+  document.getElementById('nav-d').innerHTML=labels.map((l,i)=>`<a href="${hrefs[i]}" class="nav-a" onclick="cerrarMobile()">${l}</a>`).join('');
+  document.getElementById('nav-m-inner').innerHTML=labels.map((l,i)=>`<a href="${hrefs[i]}" onclick="cerrarMobile()" style="font-size:.88rem;font-weight:500;color:var(--mid);transition:color .2s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--mid)'">${l}</a>`).join('');
+}
+function toggleMobile(){const m=document.getElementById('nav-m');m.style.display=m.style.display==='none'?'block':'none'}
+function cerrarMobile(){document.getElementById('nav-m').style.display='none'}
+
+/* ── HEADER SCROLL ───────────────────────────── */
+window.addEventListener('scroll',()=>{document.getElementById('hdr').classList.toggle('solid',scrollY>20)});
+
+/* ── RENDER CARDS ────────────────────────────── */
+function cardHTML(p){
+  const ag=AGENTES[p.agente]||{nombre:p.agente,color:'#999'};
+  const wa=`https://wa.me/52${ag.tel||'7223474298'}?text=Hola%2C%20me%20interesa%20la%20propiedad%20*${encodeURIComponent(p.nombre)}*%20que%20vi%20en%20su%20web.`;
+  const specs=p.rec>0?`<span class="spec"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/></svg>${p.rec} Rec.</span><span class="spec"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 12V4a2 2 0 012-2h2M4 12h16v2a6 6 0 01-6 6H10a6 6 0 01-6-6v-2z"/></svg>${p.ban} Baños</span>`:'';
+  return`<div class="prop-card rev">
+    <div class="prop-img">
+      <img src="${p.foto}" alt="${p.nombre}" loading="lazy">
+      ${p.star?'<div class="star-badge">Destacada</div>':''}
+      <div class="tipo-badge">${p.tipo}</div>
+    </div>
+    <div class="prop-body">
+      <div class="prop-price">${fmt(p.precio)}<small> ${p.moneda}</small></div>
+      <div class="prop-name">${p.nombre}</div>
+      <div class="prop-loc"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>${p.ubi}</div>
+      <div class="prop-specs">${specs}<span class="spec"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/></svg>${p.mts}m²</span>
+      <span class="spec" style="margin-left:auto"><span style="width:8px;height:8px;border-radius:50%;background:${ag.color};display:inline-block" title="${ag.nombre}"></span></span></div>
+    </div>
+    <div class="prop-foot">
+      <a href="${wa}" target="_blank" class="btn btn-red" style="width:100%;justify-content:center;padding:.65rem;">
+        <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a6.33 6.33 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        ${t('me_int')}
+      </a>
+    </div>
+  </div>`;
+}
+
+function renderProps(f={}){
+  let v=props.filter(p=>p.op==='venta'&&p.tipo!=='Terreno');
+  let r=props.filter(p=>p.op==='renta');
+  let ter=props.filter(p=>p.tipo==='Terreno');
+  if(f.op==='venta'){r=[];ter=ter}
+  if(f.op==='renta'){v=[];ter=[]}
+  if(f.tipo){v=v.filter(p=>p.tipo===f.tipo);r=r.filter(p=>p.tipo===f.tipo)}
+  if(f.ubi){const q=f.ubi.toLowerCase();v=v.filter(p=>p.ubi.toLowerCase().includes(q));r=r.filter(p=>p.ubi.toLowerCase().includes(q));ter=ter.filter(p=>p.ubi.toLowerCase().includes(q))}
+  if(f.max){v=v.filter(p=>p.precio<=f.max);r=r.filter(p=>p.precio<=f.max);ter=ter.filter(p=>p.precio<=f.max)}
+  document.getElementById('grid-venta').innerHTML=v.map(cardHTML).join('');
+  document.getElementById('grid-renta').innerHTML=r.map(cardHTML).join('');
+  document.getElementById('no-venta').style.display=v.length?'none':'block';
+  document.getElementById('no-renta').style.display=r.length?'none':'block';
+  // Terrenos grid especial
+  document.getElementById('grid-terrenos').innerHTML=ter.map(p=>{
+    const wa=`https://wa.me/527223474298?text=Hola%2C%20me%20interesa%20el%20terreno%20*${encodeURIComponent(p.nombre)}*%20que%20vi%20en%20su%20web.`;
+    return`<div class="terreno-card rev">
+      <img src="${p.foto}" alt="${p.nombre}" loading="lazy">
+      <div class="terreno-ov">
+        <div style="font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.4rem">Terreno · ${p.mts}m²</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#fff;font-weight:400;margin-bottom:.25rem">${p.nombre}</div>
+        <div style="font-size:.75rem;color:rgba(255,255,255,.65);margin-bottom:1rem">${p.ubi}</div>
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#fff">${fmt(p.precio)}</div>
+          <a href="${wa}" target="_blank" class="btn" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4);padding:.5rem 1.1rem;font-size:.72rem;backdrop-filter:blur(4px)">Me interesa</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  observeRev();
+}
+
+/* ── BUSCADOR ────────────────────────────────── */
+function buscar(){
+  const f={
+    op:document.getElementById('s-op').value,
+    tipo:document.getElementById('s-tipo').value,
+    ubi:document.getElementById('s-ubi').value.trim(),
+    max:document.getElementById('s-max').value?Number(document.getElementById('s-max').value):null
+  };
+  renderProps(f);
+  const tgt=f.op==='renta'?'#rentar':f.tipo==='Terreno'?'#terrenos':'#comprar';
+  document.querySelector(tgt).scrollIntoView({behavior:'smooth'});
+}
+
+/* ── GALERÍA ─────────────────────────────────── */
+function buildGal(){
+  const track=document.getElementById('gal-track');
+  const dots=document.getElementById('gal-dots');
+  track.innerHTML=GALERIA.map(g=>`
+    <div style="flex:0 0 100%;position:relative;aspect-ratio:16/7;overflow:hidden">
+      <img src="${g.img}" alt="${g.cap}" style="width:100%;height:100%;object-fit:cover;opacity:.8" loading="lazy">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:2.5rem clamp(1.5rem,5vw,5rem);background:linear-gradient(to top,rgba(0,0,0,.65),transparent)">
+        <div style="font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem">ESMMA Bienes Raíces</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#fff;font-weight:300">${g.cap}</div>
+      </div>
+    </div>`).join('');
+  dots.innerHTML=GALERIA.map((_,i)=>`<div class="gal-dot${i===0?' on':''}" onclick="galGo(${i})"></div>`).join('');
+  document.getElementById('gal-counter').textContent=`01 / 0${GALERIA.length}`;
+}
+function galMove(d){galGo((galIdx+d+GALERIA.length)%GALERIA.length)}
+function galGo(i){
+  galIdx=i;
+  document.getElementById('gal-track').style.transform=`translateX(-${i*100}%)`;
+  document.querySelectorAll('.gal-dot').forEach((d,j)=>d.classList.toggle('on',j===i));
+  document.getElementById('gal-counter').textContent=`${String(i+1).padStart(2,'0')} / 0${GALERIA.length}`;
+}
+setInterval(()=>galMove(1),5000);
+
+/* ── TESTIMONIOS ─────────────────────────────── */
+function buildTesti(){
+  document.getElementById('testi-grid').innerHTML=TESTI.map(t=>`
+    <div class="testi-card rev">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">${'★'.repeat(t.stars)}</div>
+      <p class="testi-txt">${t.txt}</p>
+      <div class="testi-by">
+        <img src="${t.foto}" alt="${t.nombre}" class="testi-av">
+        <div><div class="testi-nm">${t.nombre}</div><div class="testi-rl">${t.rol}</div></div>
+      </div>
+    </div>`).join('');
+}
+
+/* ── INVERSIÓN BROCHURE ──────────────────────── */
+function solBrochure(tipo){
+  window.open(`https://wa.me/527223474298?text=Hola%20ESMMA%2C%20solicito%20el%20brochure%20de%20*${encodeURIComponent(tipo)}*.`,'_blank');
+}
+
+/* ── CONTACTO ────────────────────────────────── */
+function enviarCF(){
+  const n=document.getElementById('cf-n').value.trim();
+  const tel=document.getElementById('cf-t').value.trim();
+  const e=document.getElementById('cf-e').value.trim();
+  const m=document.getElementById('cf-m').value.trim();
+  if(!n||!tel){alert('Por favor completa nombre y teléfono.');return}
+  window.open(`https://wa.me/527223474298?text=${encodeURIComponent(`Hola ESMMA Bienes Raíces\n*Nombre:* ${n}\n*Teléfono:* ${tel}\n*Email:* ${e}\n*Mensaje:* ${m}`)}`,'_blank');
+}
+
+/* ── POPUP ───────────────────────────────────── */
+function abrirPop(){if(sessionStorage.getItem('pop'))return;document.getElementById('pop-bg').classList.add('on');sessionStorage.setItem('pop','1')}
+function cerrarPop(){document.getElementById('pop-bg').classList.remove('on')}
+function enviarPop(){
+  const n=document.getElementById('pop-n').value.trim();
+  const tel=document.getElementById('pop-t').value.trim();
+  const e=document.getElementById('pop-e').value.trim();
+  const i=document.getElementById('pop-i').value;
+  if(!n||!tel){alert('Nombre y teléfono son obligatorios.');return}
+  window.open(`https://wa.me/527223474298?text=${encodeURIComponent(`Hola ESMMA, me registré desde la web.\n*Nombre:* ${n}\n*Teléfono:* ${tel}\n*Email:* ${e}\n*Interés:* ${i||'No especificado'}`)}`,'_blank');
+  cerrarPop();
+}
+setTimeout(abrirPop,5000);
+
+/* ── LOGIN ASESORAS ──────────────────────────── */
+function abrirLogin(){if(userLogged){abrirPanel();return}document.getElementById('login-bg').classList.add('on')}
+function cerrarLogin(){document.getElementById('login-bg').classList.remove('on');document.getElementById('l-err').style.display='none'}
+function doLogin(){
+  const u=document.getElementById('l-user').value.trim();
+  const p=document.getElementById('l-pass').value;
+  if(AGENTES[u]&&AGENTES[u].pass===p){userLogged=u;cerrarLogin();abrirPanel()}
+  else{document.getElementById('l-err').style.display='block'}
+}
+
+/* ── PANEL ───────────────────────────────────── */
+function abrirPanel(){
+  const ag=AGENTES[userLogged];
+  document.getElementById('panel-av').textContent=ag.nombre.charAt(0);
+  document.getElementById('panel-av').style.background=ag.color;
+  document.getElementById('panel-nm').textContent=ag.nombre;
+  document.getElementById('panel-rl').textContent='Panel de propiedades';
+  renderTabla();
+  document.getElementById('panel-bg').classList.add('on');
+  // Mostrar botón asesoras en header
+  document.getElementById('ags-btn').style.display='flex';
+}
+function cerrarPanel(){document.getElementById('panel-bg').classList.remove('on');userLogged=null}
+function renderTabla(){
+  const lista=props.filter(p=>userLogged==='lupita'||userLogged==='elena'?p.agente===userLogged:true);
+  const tb=document.getElementById('tbl-body');
+  if(!lista.length){tb.innerHTML='<tr><td colspan="5" style="padding:2rem;text-align:center;color:var(--light)">Sin propiedades registradas</td></tr>';return}
+  tb.innerHTML=lista.map(p=>{
+    const ag=AGENTES[p.agente]||{nombre:p.agente,color:'#999'};
+    return`<tr style="border-bottom:1px solid var(--line)">
+      <td style="padding:.75rem 1rem;display:flex;align-items:center;gap:.75rem">
+        <img src="${p.foto}" style="width:44px;height:44px;object-fit:cover;flex-shrink:0" loading="lazy">
+        <div>
+          <div style="font-weight:500;font-size:.82rem">${p.nombre}</div>
+          <div style="font-size:.72rem;color:var(--light)">${p.ubi}</div>
+        </div>
+      </td>
+      <td style="padding:.75rem 1rem"><span style="font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .6rem;background:${p.op==='venta'?'#EBF4FF':'#F0FFF4'};color:${p.op==='venta'?'#2B6CB0':'#276749'}">${p.op}</span></td>
+      <td style="padding:.75rem 1rem;font-family:'Cormorant Garamond',serif;font-size:1rem">${fmt(p.precio)}</td>
+      <td style="padding:.75rem 1rem"><span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem"><span style="width:8px;height:8px;border-radius:50%;background:${ag.color};display:inline-block"></span>${ag.nombre}</span></td>
+      <td style="padding:.75rem 1rem">
+        <div style="display:flex;gap:1rem">
+          <button onclick="abrirFormProp(${p.id})" style="background:none;border:none;cursor:pointer;font-size:.75rem;font-weight:600;color:#3182CE" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">Editar</button>
+          <button onclick="eliminarProp(${p.id})" style="background:none;border:none;cursor:pointer;font-size:.75rem;font-weight:600;color:var(--red)" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">Eliminar</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+/* ── FORM PROPIEDAD ──────────────────────────── */
+function abrirFormProp(id){
+  document.getElementById('fp-bg').classList.add('on');
+  if(id){
+    const p=props.find(x=>x.id===id);
+    document.getElementById('fp-label').textContent='Editar Propiedad';
+    document.getElementById('fp-title').textContent='Editar Propiedad';
+    document.getElementById('fp-id').value=p.id;
+    document.getElementById('fp-nombre').value=p.nombre;
+    document.getElementById('fp-op').value=p.op;
+    document.getElementById('fp-tipo').value=p.tipo;
+    document.getElementById('fp-precio').value=p.precio;
+    document.getElementById('fp-moneda').value=p.moneda;
+    document.getElementById('fp-ubi').value=p.ubi;
+    document.getElementById('fp-rec').value=p.rec;
+    document.getElementById('fp-ban').value=p.ban;
+    document.getElementById('fp-mts').value=p.mts;
+    document.getElementById('fp-foto').value=p.foto;
+    document.getElementById('fp-star').value=String(p.star);
+  }else{
+    document.getElementById('fp-label').textContent='Nueva Propiedad';
+    document.getElementById('fp-title').textContent='Agregar Propiedad';
+    ['fp-id','fp-nombre','fp-precio','fp-moneda','fp-ubi','fp-rec','fp-ban','fp-mts','fp-foto'].forEach(id=>{document.getElementById(id).value=''});
+    document.getElementById('fp-op').value='venta';
+    document.getElementById('fp-tipo').value='Casa';
+    document.getElementById('fp-star').value='false';
+  }
+}
+function cerrarFP(){document.getElementById('fp-bg').classList.remove('on')}
+function guardarProp(){
+  const id=document.getElementById('fp-id').value;
+  const np={
+    id:id?Number(id):Date.now(),
+    nombre:document.getElementById('fp-nombre').value.trim(),
+    op:document.getElementById('fp-op').value,
+    tipo:document.getElementById('fp-tipo').value,
+    precio:Number(document.getElementById('fp-precio').value),
+    moneda:document.getElementById('fp-moneda').value.trim()||'MXN',
+    ubi:document.getElementById('fp-ubi').value.trim(),
+    rec:Number(document.getElementById('fp-rec').value)||0,
+    ban:Number(document.getElementById('fp-ban').value)||0,
+    mts:Number(document.getElementById('fp-mts').value)||0,
+    foto:document.getElementById('fp-foto').value.trim()||'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80',
+    star:document.getElementById('fp-star').value==='true',
+    agente:userLogged,
+  };
+  if(!np.nombre||!np.precio){alert('Nombre y precio son obligatorios.');return}
+  if(id){
+    const idx=props.findIndex(x=>x.id===Number(id));
+    if(props[idx].agente!==userLogged){alert('Solo puedes editar tus propias propiedades.');return}
+    props[idx]=np;
+  }else{props.push(np)}
+  save();renderProps();renderTabla();cerrarFP();
+}
+function eliminarProp(id){
+  const p=props.find(x=>x.id===id);
+  if(p.agente!==userLogged){alert('Solo puedes eliminar tus propias propiedades.');return}
+  if(!confirm(`¿Eliminar "${p.nombre}"?`))return;
+  props=props.filter(x=>x.id!==id);
+  save();renderProps();renderTabla();
+}
+
+/* ── IDIOMA ──────────────────────────────────── */
+function toggleLang(){
+  lang=lang==='es'?'en':'es';
+  document.getElementById('lang-btn').textContent=lang==='es'?'EN':'ES';
+  document.documentElement.lang=lang;
+  applyI18n();
+}
+function applyI18n(){
+  document.getElementById('hero-eye').textContent=t('hero_eye');
+  document.getElementById('h1a').textContent=t('hero_a');
+  document.getElementById('h1b').textContent=t('hero_b');
+  document.getElementById('h1c').textContent=t('hero_c');
+  document.getElementById('hero-sub').textContent=t('hero_sub');
+  document.getElementById('lbl-op').textContent=t('s_op');
+  document.getElementById('lbl-tipo').textContent=t('s_tipo');
+  document.getElementById('lbl-ubi').textContent=t('s_ubi');
+  document.getElementById('lbl-max').textContent=t('s_max');
+  document.getElementById('tit-comprar').textContent=t('sec_comprar');
+  document.getElementById('tit-rentar').textContent=t('sec_rentar');
+  document.getElementById('tit-terrenos').textContent=t('sec_terrenos');
+  document.getElementById('ter-sub').textContent=t('ter_sub');
+  document.getElementById('tit-inv').textContent=t('sec_inv');
+  document.getElementById('inv-sub').textContent=t('inv_sub');
+  document.getElementById('tit-gal').textContent=t('sec_gal');
+  document.getElementById('tit-testi').textContent=t('sec_testi');
+  document.getElementById('tit-asesoras').textContent=t('sec_asesoras');
+  document.getElementById('tit-ct').textContent=t('sec_ct');
+  document.getElementById('h2-ct').textContent=t('contacto');
+  document.getElementById('ct-sub').textContent=t('ct_sub');
+  document.getElementById('st0').textContent=t('stats')[0];
+  document.getElementById('st1').textContent=t('stats')[1];
+  document.getElementById('st2').textContent=t('stats')[2];
+  document.getElementById('st3').textContent=t('stats')[3];
+  document.getElementById('wa-txt').textContent=t('wa');
+  document.getElementById('ags-txt').textContent=t('ags');
+  document.getElementById('footer-rights').textContent=t('rights');
+  document.getElementById('footer-priv').textContent=t('privacy');
+  document.getElementById('footer-terms').textContent=t('terms');
+  document.getElementById('pop-title').textContent=t('pop_title');
+  document.getElementById('pop-sub').textContent=t('pop_sub');
+  document.getElementById('pop-int').textContent=t('pop_int');
+  document.getElementById('pop-btn').textContent=t('pop_btn');
+  document.getElementById('pop-skip').textContent=t('pop_skip');
+  document.getElementById('inv1').textContent=t('i1')||'Terrenos';
+  document.getElementById('inv2').textContent=t('i2')||'Preventas';
+  document.getElementById('inv3').textContent=t('i3')||'Desarrollos';
+  buildNav();
+  renderProps();
+}
+
+/* ── REVEAL SCROLL ───────────────────────────── */
+function observeRev(){
+  document.querySelectorAll('.rev:not(.in)').forEach(el=>{
+    new IntersectionObserver(([e],o)=>{if(e.isIntersecting){el.classList.add('in');o.disconnect()}},{threshold:.1}).observe(el);
+  });
+}
+
+/* ── INIT ────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded',()=>{
+  buildNav();
+  renderProps();
+  buildGal();
+  buildTesti();
+  // Mostrar botón asesoras en header
+  document.getElementById('ags-btn').style.display='flex';
+  observeRev();
+});
+</script>
+</body>
+</html>
