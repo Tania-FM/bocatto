@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bocatto de Oro · Buffet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--g:#C9A84C;--gl:#E8C97A;--bk:#0A0A0A;--bd:rgba(201,168,76,0.28);--bdg:rgba(201,168,76,0.55);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bk);color:#e8dcc8;font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+
+/* PORTADA */
+#cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse at 50% 40%, #261c00 0%, #110e00 45%, #000 100%);
+  text-align:center;padding:44px 28px 52px;position:relative;}
+#cover::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gl),transparent);}
+.c-logo{width:min(300px,80vw);filter:drop-shadow(0 0 28px rgba(201,168,76,0.5));
+  animation:fdown .8s ease both;}
+.c-title{font-family:'Playfair Display',serif;font-size:clamp(44px,13vw,72px);font-weight:900;
+  background:linear-gradient(140deg,#f5e0a0,var(--g),#8a6010);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:5px;line-height:1;margin-top:20px;animation:fup .8s .2s ease both;}
+.c-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(14px,4vw,17px);color:#9a856a;letter-spacing:2px;
+  margin-top:8px;animation:fup .8s .3s ease both;}
+.c-line{display:flex;align-items:center;gap:16px;margin:22px 0;animation:fup .8s .4s ease both;}
+.c-line span{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--g));}
+.c-line span:last-child{background:linear-gradient(90deg,var(--g),transparent);}
+.c-btn{background:linear-gradient(135deg,var(--g),#7a5000);border:none;border-radius:100px;
+  padding:16px 48px;font-family:'Montserrat',sans-serif;font-size:clamp(12px,3.5vw,14px);
+  font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1a1000;cursor:pointer;
+  box-shadow:0 6px 28px rgba(201,168,76,0.4);transition:transform .2s,box-shadow .2s;
+  animation:fup .8s .5s ease both;}
+.c-btn:active{transform:scale(.97);}
+.c-price{margin-top:16px;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(14px,4vw,16px);color:#5a4e38;animation:fup .8s .6s ease both;}
+.c-price strong{font-family:'Playfair Display',serif;font-style:normal;
+  -webkit-text-fill-color:var(--gl);}
+
+/* APP */
+#app{display:none;}
+
+/* HEADER */
+header{text-align:center;padding:26px 20px 20px;
+  background:linear-gradient(180deg,#1c1500,var(--bk));
+  border-bottom:1px solid var(--bd);position:relative;}
+header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gl),transparent);}
+.h-logo{width:140px;max-width:50vw;filter:drop-shadow(0 0 12px rgba(201,168,76,0.3));}
+.h-tag{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(11px,3vw,13px);color:var(--g);letter-spacing:3px;
+  text-transform:uppercase;margin-top:7px;}
+
+/* TABS */
+.tabs{display:flex;position:sticky;top:0;z-index:50;
+  background:rgba(8,8,8,0.97);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--bd);}
+.tab{flex:1;background:none;border:none;cursor:pointer;padding:14px 4px;
+  font-family:'Montserrat',sans-serif;font-size:clamp(10px,2.8vw,12px);
+  font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:#6a5e45;transition:color .25s;position:relative;}
+.tab::after{content:'';position:absolute;bottom:-1px;left:50%;right:50%;
+  height:2px;background:var(--g);transition:left .25s,right .25s;}
+.tab.on{color:var(--gl);}
+.tab.on::after{left:0;right:0;}
+
+/* SECTIONS */
+.sec{display:none;padding:24px 16px 64px;max-width:520px;margin:0 auto;}
+.sec.on{display:block;animation:fup .4s ease both;}
+.st{font-family:'Playfair Display',serif;font-size:clamp(26px,7.5vw,38px);
+  font-weight:900;color:var(--gl);text-align:center;line-height:1.1;}
+.ss{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(13px,3.5vw,15px);color:#a09070;text-align:center;
+  margin-top:4px;letter-spacing:1px;}
+
+/* BUFFET CARD */
+.bcard{margin:20px 0 0;background:linear-gradient(145deg,#181200,#100e00);
+  border:1px solid var(--bdg);border-radius:16px;padding:24px 20px;
+  box-shadow:0 6px 32px rgba(0,0,0,0.7),inset 0 1px 0 rgba(201,168,76,0.12);}
+.pbadge{display:inline-flex;align-items:baseline;gap:4px;
+  background:linear-gradient(135deg,var(--g),#905800);
+  border-radius:100px;padding:8px 26px;margin-bottom:16px;
+  box-shadow:0 4px 18px rgba(201,168,76,0.35);}
+.pcurr{font-size:16px;font-weight:600;color:#1a1000;}
+.pnum{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#1a1000;line-height:1;}
+.plbl{font-size:10px;font-weight:600;color:rgba(26,16,0,0.65);text-transform:uppercase;
+  letter-spacing:2px;align-self:flex-end;padding-bottom:7px;}
+
+.divl{display:flex;align-items:center;gap:10px;margin:14px 0;}
+.divl span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--g),transparent);}
+.divl i{color:var(--g);font-size:8px;font-style:normal;}
+
+.igrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;}
+.ii{display:flex;align-items:center;gap:9px;
+  background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.11);
+  border-radius:10px;padding:10px 11px;}
+.ii.full{grid-column:1/-1;}
+.ico{font-size:19px;flex-shrink:0;}
+.itx{font-family:'Montserrat',sans-serif;font-size:clamp(9px,2.6vw,11px);
+  font-weight:500;color:#c0a060;letter-spacing:0.5px;text-transform:uppercase;line-height:1.35;}
+
+/* ALERTS */
+.al{margin-top:12px;border-radius:10px;padding:12px 15px;
+  display:flex;align-items:flex-start;gap:10px;}
+.al.w{background:rgba(160,90,0,0.14);border:1px solid rgba(180,110,0,0.4);}
+.al.d{background:rgba(140,0,0,0.14);border:1px solid rgba(160,0,0,0.42);}
+.al.i{background:rgba(201,168,76,0.07);border-left:3px solid var(--g);border-radius:0 10px 10px 0;}
+.aico{font-size:17px;flex-shrink:0;margin-top:2px;}
+.atx{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,4vw,16px);
+  line-height:1.55;color:#c0a868;}
+.atx b{font-family:'Montserrat',sans-serif;font-size:clamp(9px,2.5vw,11px);
+  font-weight:700;letter-spacing:1px;text-transform:uppercase;display:block;
+  margin-bottom:3px;color:#d4a840;}
+.atx .hl{font-style:normal;font-weight:700;color:#e07050;}
+
+/* CAFETERIA */
+.ci{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(14px,4vw,16px);color:#9a856a;text-align:center;margin:14px 0 20px;}
+.dc{background:linear-gradient(145deg,#141003,#0c0a00);border:1px solid var(--bd);
+  border-radius:13px;padding:17px 18px;margin-bottom:10px;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:border-color .3s;position:relative;overflow:hidden;}
+.dc:hover{border-color:var(--bdg);}
+.dc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--gl),var(--g));border-radius:3px 0 0 3px;}
+.di{display:flex;align-items:center;gap:11px;}
+.de{font-size:24px;}
+.dn{font-family:'Playfair Display',serif;font-size:clamp(15px,4.5vw,18px);
+  font-weight:700;color:var(--gl);}
+.dg{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;color:#7a6b55;margin-top:2px;}
+.pt{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;
+  color:#5a4e3a;letter-spacing:1px;text-transform:uppercase;
+  border:1px dashed #3a3020;border-radius:6px;padding:5px 10px;}
+
+/* QR */
+.qrs{margin:28px 0 0;text-align:center;}
+.qrsub{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:14px;color:#7a6b55;margin-bottom:20px;}
+.qrf{display:inline-flex;flex-direction:column;align-items:center;
+  background:linear-gradient(145deg,#181200,#0c0a00);
+  border:1px solid var(--bdg);border-radius:18px;padding:22px 22px 16px;
+  box-shadow:0 8px 36px rgba(0,0,0,0.6);}
+#qr-code{background:#fff;padding:11px;border-radius:9px;display:inline-block;}
+#qr-code canvas,#qr-code img{display:block;border-radius:4px;}
+.qrc{margin-top:10px;font-family:'Montserrat',sans-serif;font-size:10px;
+  font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#6a5c3f;}
+.uiw{margin-top:22px;display:flex;flex-direction:column;gap:10px;}
+.ulbl{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:#7a6b55;}
+.urow{display:flex;gap:8px;}
+.uinp{flex:1;background:rgba(201,168,76,0.05);border:1px solid var(--bd);
+  border-radius:9px;padding:11px 13px;color:#f0d890;font-family:'Montserrat',sans-serif;
+  font-size:13px;outline:none;transition:border-color .25s;}
+.uinp:focus{border-color:var(--g);}
+.ubtn{background:linear-gradient(135deg,var(--g),#7a5000);border:none;border-radius:9px;
+  padding:11px 16px;color:#1a1000;font-family:'Montserrat',sans-serif;font-size:12px;
+  font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
+.dlbtn{margin-top:10px;width:100%;background:rgba(201,168,76,0.07);
+  border:1px solid var(--bd);border-radius:9px;padding:12px;color:var(--g);
+  font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;
+  transition:background .2s,border-color .2s;}
+.dlbtn:hover{background:rgba(201,168,76,0.14);border-color:var(--g);}
+
+footer{text-align:center;padding:24px 16px 44px;border-top:1px solid var(--bd);}
+footer p{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:12px;color:#4a3f28;letter-spacing:1px;margin-top:4px;}
+
+@keyframes fdown{from{opacity:0;transform:translateY(-18px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fup{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+/* LOGO TIPOGRAFICO PORTADA */
+.c-logo-txt{display:flex;flex-direction:column;align-items:center;margin-bottom:8px;animation:fdown .8s ease both;}
+.c-logo-main{font-family:'Playfair Display',serif;font-size:clamp(52px,15vw,88px);font-weight:900;
+  background:linear-gradient(140deg,#f5e0a0,var(--g),#8a6010);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:10px;line-height:1;}
+.c-logo-divider{display:flex;align-items:center;gap:12px;margin:6px 0;width:100%;}
+.c-logo-divider span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--g),transparent);}
+.c-logo-diamond{color:var(--g);font-size:10px;font-style:normal;}
+.c-logo-sub{font-family:'Montserrat',sans-serif;font-size:clamp(14px,4vw,18px);font-weight:600;
+  letter-spacing:12px;color:var(--g);text-transform:uppercase;}
+
+/* LOGO TIPOGRAFICO HEADER */
+.h-logo-txt{display:flex;flex-direction:column;align-items:center;margin-bottom:6px;}
+.h-logo-main{font-family:'Playfair Display',serif;font-size:clamp(28px,8vw,42px);font-weight:900;
+  background:linear-gradient(140deg,#f5e0a0,var(--g),#8a6010);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:6px;line-height:1;}
+.h-logo-sub{font-family:'Montserrat',sans-serif;font-size:clamp(10px,3vw,13px);font-weight:600;
+  letter-spacing:8px;color:var(--g);text-transform:uppercase;margin-top:2px;}
+
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<div id="cover">
+  <div class="c-logo-txt">
+    <div class="c-logo-main">BOCATTO</div>
+    <div class="c-logo-divider"><span></span><span class="c-logo-diamond">✦</span><span></span></div>
+    <div class="c-logo-sub">BUFFET</div>
+  </div>
+  <p class="c-sub">Experiencia gastronómica sin límites</p>
+  <div class="c-line"><span></span><span style="color:var(--g);font-size:10px;">✦</span><span></span></div>
+  <button class="c-btn" onclick="enterMenu()">Ver Menú &rarr;</button>
+  <p class="c-price">Adultos <strong>$169</strong> &middot; Niños <strong>$129</strong></p>
+</div>
+
+<!-- APP -->
+<div id="app">
+
+<header>
+  <div class="h-logo-txt">
+    <div class="h-logo-main">BOCATTO</div>
+    <div class="h-logo-sub">· BUFFET ·</div>
+  </div>
+  <p class="h-tag">Menú Digital &middot; Mesa Directa</p>
+</header>
+
+<div class="tabs">
+  <button class="tab on" onclick="go('buffet',this)">🍽 Buffet</button>
+  <button class="tab" onclick="go('cafeteria',this)">☕ Cafetería</button>
+  <button class="tab" onclick="go('carnes',this)">🥩 Carnes</button>
+  <button class="tab" onclick="go('postres',this)">🍮 Postres</button>
+  <button class="tab" onclick="go('qr',this)">⬛ QR</button>
+</div>
+
+<main>
+
+<!-- BUFFET -->
+<section id="s-buffet" class="sec on">
+  <div style="text-align:center;padding-top:4px;">
+    <h1 class="st">Buffet</h1>
+    <p class="ss">Todo incluido &middot; Sin límites</p>
+  </div>
+  <div class="bcard">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
+      <div class="pbadge">
+        <span class="pcurr">$</span>
+        <span class="pnum">169</span>
+        <span class="plbl">adultos</span>
+      </div>
+      <div class="pbadge" style="background:linear-gradient(135deg,#a07820,#6a4800);">
+        <span class="pcurr">$</span>
+        <span class="pnum">129</span>
+        <span class="plbl">niños</span>
+      </div>
+    </div>
+    <div class="divl"><span></span><i>✦</i><span></span></div>
+    <!-- Horarios -->
+    <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+      <div style="flex:1;background:rgba(201,168,76,0.08);border:1px solid var(--bdg);border-radius:10px;padding:10px 14px;text-align:center;">
+        <div style="font-family:'Playfair Display',serif;font-size:clamp(13px,3.5vw,16px);color:var(--gl);font-weight:700;">☀️ Desayuno</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#8a7a55;letter-spacing:1px;margin-top:2px;">9:00 am – 2:00 pm</div>
+      </div>
+      <div style="flex:1;background:rgba(201,168,76,0.08);border:1px solid var(--bdg);border-radius:10px;padding:10px 14px;text-align:center;">
+        <div style="font-family:'Playfair Display',serif;font-size:clamp(13px,3.5vw,16px);color:var(--gl);font-weight:700;">🍽 Comida</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:10px;color:#8a7a55;letter-spacing:1px;margin-top:2px;">2:00 pm – 6:00 pm</div>
+      </div>
+    </div>
+
+    <!-- Desayuno -->
+    <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g);margin:10px 0 8px;">☀️ Desayuno</div>
+    <div class="igrid">
+      <div class="ii"><span class="ico">🥗</span><span class="itx">Ensaladas</span></div>
+      <div class="ii"><span class="ico">🫔</span><span class="itx">Enchiladas</span></div>
+      <div class="ii"><span class="ico">🌮</span><span class="itx">Chilaquiles</span></div>
+      <div class="ii"><span class="ico">🍳</span><span class="itx">Huevo a la mexicana</span></div>
+      <div class="ii"><span class="ico">🍳</span><span class="itx">Huevo con jamón</span></div>
+      <div class="ii"><span class="ico">🍳</span><span class="itx">Huevo estrellado</span></div>
+      <div class="ii"><span class="ico">🍳</span><span class="itx">Huevo en salsa verde</span></div>
+      <div class="ii"><span class="ico">🫓</span><span class="itx">Molletes</span></div>
+      <div class="ii"><span class="ico">🫕</span><span class="itx">Enfrijoladas</span></div>
+      <div class="ii"><span class="ico">🫓</span><span class="itx">Sopes</span></div>
+      <div class="ii"><span class="ico">🍞</span><span class="itx">Pan</span></div>
+      <div class="ii"><span class="ico">🍓</span><span class="itx">Fruta</span></div>
+      <div class="ii full"><span class="ico">☕</span><span class="itx">Café &middot; <span style="color:var(--gl);font-weight:600;">Incluido gratis</span></span></div>
+    </div>
+
+    <!-- Comida -->
+    <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g);margin:16px 0 8px;">🍽 Comida</div>
+    <div class="igrid">
+      <div class="ii"><span class="ico">🍚</span><span class="itx">Arroz</span></div>
+      <div class="ii"><span class="ico">🫔</span><span class="itx">Enchiladas</span></div>
+      <div class="ii"><span class="ico">🌮</span><span class="itx">Chilaquiles</span></div>
+      <div class="ii"><span class="ico">🍲</span><span class="itx">Albóndigas</span></div>
+      <div class="ii"><span class="ico">🍗</span><span class="itx">Nuggets</span></div>
+      <div class="ii"><span class="ico">🍝</span><span class="itx">Espagueti</span></div>
+    </div>
+
+    <div class="al w">
+      <span class="aico">⚠️</span>
+      <div class="atx"><b>Desperdicio de alimentos</b>
+        Lo que te sirvas y no consumas tendrá un cargo adicional de <strong style="font-family:'Playfair Display',serif;font-size:1.1em;color:#f0c060;font-weight:700;">$50 pesos</strong>.
+      </div>
+    </div>
+
+    <div class="al d">
+      <span class="aico">🚫</span>
+      <div class="atx"><b>Buffet individual</b></div>
+    </div>
+
+    <div class="al i">
+      <span class="aico">☕</span>
+      <div class="atx">Bebidas de especialidad (café) tienen costo extra. Ver sección <em>Cafetería</em>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CARNES -->
+<section id="s-carnes" class="sec" role="tabpanel">
+  <div style="text-align:center;padding-top:4px;">
+    <h1 class="st">Cortes Finos</h1>
+    <p class="ss">Por platillo &middot; A la parrilla</p>
+  </div>
+  <p class="ci">Cortes premium preparados al momento. Costo adicional al buffet.</p>
+
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">Picaña</div><div class="dg">Corte brasileño · Jugoso y tierno</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$180</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">New York</div><div class="dg">Corte clásico · Sabor intenso</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$190</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">Entrecot</div><div class="dg">Corte europeo · Marmoleado</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$190</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">Rib-Eye</div><div class="dg">Corte premium · Rico en sabor</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$190</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">Filete de Res</div><div class="dg">El más suave · Corte noble</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$230</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">Arrachera</div><div class="dg">Marinada · Asada a la parrilla</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$185</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥩</span><div><div class="dn">Cecina</div><div class="dg">Estilo tradicional · Salada al gusto</div></div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);">$185</span>
+  </div>
+  <div class="dc" style="border-color:var(--bdg);">
+    <div class="di"><span class="de">🔥</span><div>
+      <div class="dn">Mix de Carne</div>
+      <div class="dg">Chorizo rojo, verde y argentino · Bistec · Nopales · Cebolla · Frijoles</div>
+    </div></div>
+    <span class="pt" style="color:var(--gl);border-color:var(--g);font-size:13px;">$350</span>
+  </div>
+</section>
+
+<!-- CAFETERIA -->
+<section id="s-cafeteria" class="sec">
+  <div style="text-align:center;padding-top:4px;">
+    <h1 class="st">Cafetería</h1>
+    <p class="ss">Bebidas de especialidad &middot; A la carta</p>
+  </div>
+  <p class="ci">Costo adicional al buffet.</p>
+  <div class="dc">
+    <div class="di"><span class="de">☕</span><div><div class="dn">Capuchino</div><div class="dg">Espresso · Leche vaporizada · Espuma</div></div></div>
+    <span class="pt">$50</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🖤</span><div><div class="dn">Americano</div><div class="dg">Espresso · Agua caliente</div></div></div>
+    <span class="pt">$30</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥛</span><div><div class="dn">Latte</div><div class="dg">Espresso · Leche cremosa</div></div></div>
+    <span class="pt">$50</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🍫</span><div><div class="dn">Chocolate Caliente</div><div class="dg">Cacao · Leche · Cremoso</div></div></div>
+    <span class="pt">$50</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🧊</span><div><div class="dn">Chocolate Frío</div><div class="dg">Cacao · Leche · Hielo</div></div></div>
+    <span class="pt">$50</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🍵</span><div><div class="dn">Té</div><div class="dg">Variedad de infusiones</div></div></div>
+    <span class="pt">$25</span>
+  </div>
+</section>
+
+<!-- POSTRES ESPECIALES -->
+<section id="s-postres" class="sec" role="tabpanel">
+  <div style="text-align:center;padding-top:4px;">
+    <h1 class="st">Postres Especiales</h1>
+    <p class="ss">A la carta &middot; Costo adicional</p>
+  </div>
+  <p class="ci">Delicias especiales con costo extra al buffet.</p>
+  <div class="dc">
+    <div class="di"><span class="de">🧇</span><div><div class="dn">Wafles con Helado</div><div class="dg">Wafle crujiente · Helado de vainilla</div></div></div>
+    <span class="pt">$55</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🍋</span><div><div class="dn">Pay de Limón</div><div class="dg">Base crujiente · Por rebanada</div></div></div>
+    <span class="pt">$35</span>
+  </div>
+  <div class="dc">
+    <div class="di"><span class="de">🥐</span><div><div class="dn">Pan de Dulce</div><div class="dg">Selección del día · Por pieza</div></div></div>
+    <span class="pt">$25</span>
+  </div>
+</section>
+
+<!-- QR -->
+<section id="s-qr" class="sec">
+  <div style="text-align:center;padding-top:4px;">
+    <h1 class="st">Código QR</h1>
+    <p class="ss">Para imprimir en mesas</p>
+  </div>
+  <div class="qrs">
+    <p class="qrsub">Escanea con la cámara de tu teléfono</p>
+    <div class="qrf">
+      <div id="qr-code"></div>
+      <p class="qrc">Bocatto de Oro · Menú Digital</p>
+    </div>
+    <div class="uiw">
+      <label class="ulbl" for="qr-url">URL del menú</label>
+      <div class="urow">
+        <input class="uinp" id="qr-url" type="url" value="https://www.bocattobuffet.com/menu" placeholder="https://tu-dominio.com/menu">
+        <button class="ubtn" onclick="regenQR()">Generar</button>
+      </div>
+      <button class="dlbtn" onclick="dlQR()">⬇ Descargar QR (PNG)</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 Bocatto de Oro Buffet · Todos los derechos reservados</p>
+  <p style="margin-top:4px;font-size:11px;">Los precios pueden variar sin previo aviso</p>
+</footer>
+
+</div>
+
+<script>
+function enterMenu(){
+  document.getElementById('cover').style.display='none';
+  document.getElementById('app').style.display='block';
+  buildQR(document.getElementById('qr-url').value);
+}
+function go(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+function buildQR(url){
+  var el=document.getElementById('qr-code');
+  el.innerHTML='';
+  new QRCode(el,{text:url||'https://www.bocattobuffet.com/menu',width:200,height:200,colorDark:'#1a1000',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+}
+function regenQR(){
+  var url=document.getElementById('qr-url').value.trim();
+  if(!url){alert('Ingresa una URL válida.');return;}
+  buildQR(url);
+}
+function dlQR(){
+  var c=document.querySelector('#qr-code canvas');
+  if(!c){alert('Genera el QR primero.');return;}
+  var a=document.createElement('a');
+  a.download='QR_Bocatto_Menu.png';
+  a.href=c.toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
